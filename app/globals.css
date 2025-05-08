@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 215 75% 34%; /* School blue */
+    --primary-foreground: 210 40% 98%;
+    --secondary: 45 100% 51%; /* Gold yellow */
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 45 100% 51%; /* Gold yellow */
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 215 75% 34%; /* School blue */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 215 75% 40%; /* Lighter school blue for dark mode */
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 45 100% 60%; /* Brighter gold for dark mode */
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 45 100% 60%; /* Brighter gold for dark mode */
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 215 75% 40%; /* Lighter school blue for dark mode */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-open-sans), sans-serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+}
+
+/* Custom styles */
+.hero-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.hero-wave svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 70px;
+}
+
+.hero-wave .shape-fill {
+  fill: #ffffff;
+}
+
+.nav-item {
+  @apply relative px-4 py-2 text-white hover:text-gold-yellow transition-colors duration-200;
+}
+
+.nav-item::after {
+  content: "";
+  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-gold-yellow transition-all duration-300 ease-in-out;
+}
+
+.nav-item:hover::after {
+  @apply w-full;
+}
+
+.animated-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.animated-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.section-divider {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #0047ab, #ffc107, transparent);
+  margin: 2rem auto;
+  width: 80%;
+  max-width: 800px;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #ffd700, #ffc107, #ffab00);
+}
+
+.maroon-gradient {
+  background: linear-gradient(135deg, #a52a2a, #8b1a1a, #800000);
+}
+
+.navy-gradient {
+  background: linear-gradient(135deg, #1a237e, #0a1744, #0d47a1);
+}
