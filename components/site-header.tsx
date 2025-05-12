@@ -115,19 +115,19 @@ export function SiteHeader() {
         <div className=" px-[55px] flex h-16 items-center justify-between">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <div
+              {/* <div
                 className={cn(
                   "relative h-16 w-16 bg-school-blue flex items-center justify-center rounded-b-lg shadow-lg transition-all duration-300",
                   scrolled ? "h-14 w-14" : "h-16 w-16",
                 )}
-              >
+              > */}
                 <Image
-                  src="/placeholder.svg?height=40&width=40"
+                  src="/great.jpg"
                   alt="Greatandy International Academy"
-                  width={40}
-                  height={40}
+                  width={80}
+                  height={80}
                 />
-              </div>
+              {/* </div> */}
               <div className="hidden md:block text-white">
                 <div className="text-lg font-bold">GREATANDY</div>
                 <div className="text-xs">INTERNATIONAL ACADEMY</div>
