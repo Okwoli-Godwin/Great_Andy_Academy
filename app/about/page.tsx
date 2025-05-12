@@ -66,7 +66,10 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-gradient-to-b from-white md:px-[45px] to-blue-50 relative overflow-hidden" id="mission-vision">
+      <section
+        className="py-20 bg-gradient-to-b from-white md:px-[45px] to-blue-50 relative overflow-hidden"
+        id="mission-vision"
+      >
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-30"></div>
         <div className="absolute bottom-0 right-0 w-1/3 h-1/3 bg-primary/5 rounded-full blur-3xl -z-10"></div>
         <div className="absolute top-1/4 left-0 w-1/4 h-1/4 bg-primary/5 rounded-full blur-3xl -z-10"></div>
@@ -297,42 +300,76 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-16 bg-muted/50" id="values">
+      <section className="py-20 bg-gradient-to-b from-muted/30 to-muted/80 relative overflow-hidden" id="values">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-30"></div>
+        <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+        <div className="absolute -top-24 -left-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+
         <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
             <div className="space-y-2">
               <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Our Values</div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">School Values & Culture</h2>
+              <div className="w-24 h-1 bg-primary mx-auto my-6"></div>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Rooted in Integrity. Driven by Excellence. Inspired for Impact.
               </p>
             </div>
           </div>
-          <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+          <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-2 lg:grid-cols-3">
             {values.map((value, index) => (
-              <Card key={index} className="bg-white">
-                <CardContent className="p-6">
-                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                    <value.icon className="h-6 w-6 text-primary" />
+              <div
+                key={index}
+                className="group relative bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-primary/10"
+              >
+                {/* Top accent bar */}
+                <div className="absolute top-0 left-0 w-full h-1 bg-primary transform origin-left transition-all duration-300 group-hover:h-2"></div>
+
+                {/* Card content */}
+                <div className="p-8 flex flex-col items-center text-center">
+                  {/* Icon with decorative background */}
+                  <div className="relative mb-6">
+                    <div className="absolute -inset-3 bg-primary/5 rounded-full blur-sm transform transition-all duration-300 group-hover:scale-110"></div>
+                    <div className="h-16 w-16 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center relative border-2 border-primary/20 transform transition-all duration-300 group-hover:scale-110 group-hover:border-primary/30">
+                      <value.icon className="h-8 w-8 text-primary" />
+                    </div>
                   </div>
-                  <h3 className="text-lg font-bold mb-2">{value.title}</h3>
-                  <p className="text-sm text-muted-foreground">{value.description}</p>
-                </CardContent>
-              </Card>
+
+                  {/* Title with decorative underline */}
+                  <h3 className="text-xl font-bold mb-3 text-navy-blue group-hover:text-primary transition-colors duration-300">
+                    {value.title}
+                  </h3>
+                  <div className="w-12 h-0.5 bg-primary/30 mb-4 transition-all duration-300 group-hover:w-16 group-hover:bg-primary"></div>
+
+                  {/* Description */}
+                  <p className="text-muted-foreground">{value.description}</p>
+                </div>
+
+                {/* Bottom decorative element */}
+                <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-primary/5 to-transparent"></div>
+              </div>
             ))}
           </div>
-          <div className="mt-12 text-center">
-            <h3 className="text-2xl font-bold mb-4">Our School Culture</h3>
-            <div className="prose max-w-3xl mx-auto text-muted-foreground">
-              <p>
+
+          <div className="mt-20 text-center bg-white rounded-xl p-8 shadow-lg border border-primary/10 max-w-4xl mx-auto relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-2 bg-primary"></div>
+            <div className="absolute -bottom-16 -right-16 w-32 h-32 bg-primary/5 rounded-full blur-xl"></div>
+            <div className="absolute -bottom-16 -left-16 w-32 h-32 bg-primary/5 rounded-full blur-xl"></div>
+
+            <h3 className="text-2xl font-bold mb-6 text-navy-blue">Our School Culture</h3>
+            <div className="w-16 h-0.5 bg-primary mx-auto mb-8"></div>
+
+            <div className="prose max-w-3xl mx-auto text-muted-foreground space-y-4">
+              <p className="relative z-10">
                 Our school environment is built on mutual respect, collaboration, and the celebration of individual
                 strengths. Students are encouraged to explore their potential, take initiative, and support one another.
               </p>
-              <p>
+              <p className="relative z-10">
                 From our structured morning devotions to our vibrant extracurriculars, our culture blends academic focus
                 with personal growth, spiritual depth, and community spirit.
               </p>
-              <p>
+              <p className="font-medium text-navy-blue relative z-10">
                 We are proud to raise academicians with character. Students who are intellectually sound, morally
                 upright, socially responsible, and globally prepared.
               </p>
