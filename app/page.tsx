@@ -7,6 +7,7 @@ import { HeroSlider } from "@/components/hero-slider"
 import { ValueCard } from "@/components/value-card"
 import { ProgramCard } from "@/components/program-card"
 import { CountUpNumber } from "@/components/count-up-number"
+import { TestimonialSlider } from "@/components/testimonial-slider"
 
 export default function Home() {
   const values = [
@@ -348,8 +349,8 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-16 bg-white">
-        <div className="container px-4 md:px-6">
+      <section className="py-16 bg-gradient-to-b from-white to-blue-50">
+        <div className="container md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
             <div className="space-y-2">
               <div className="inline-block rounded-lg bg-school-blue/10 px-3 py-1 text-sm text-school-blue">
@@ -358,88 +359,13 @@ export default function Home() {
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-navy-blue">
                 What Parents Say
               </h2>
+              <p className="max-w-[700px] text-muted-foreground mx-auto">
+                Hear from our community of parents about their experience with Greatandy Schools
+              </p>
             </div>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <Card className="bg-white animated-card">
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <div className="mr-4">
-                    <div className="h-12 w-12 rounded-full bg-navy-blue/10 overflow-hidden">
-                      <Image
-                        src="/placeholder.svg?height=48&width=48"
-                        width={48}
-                        height={48}
-                        alt="Parent"
-                        className="object-cover"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-navy-blue">Mrs. Johnson</h4>
-                    <p className="text-xs text-muted-foreground">Parent of JSS2 Student</p>
-                  </div>
-                </div>
-                <p className="text-muted-foreground italic">
-                  "The transformation in my child since joining Greatandy has been remarkable. The teachers are
-                  dedicated and the values instilled are evident in my child's behavior and academic performance."
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white animated-card">
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <div className="mr-4">
-                    <div className="h-12 w-12 rounded-full bg-navy-blue/10 overflow-hidden">
-                      <Image
-                        src="/placeholder.svg?height=48&width=48"
-                        width={48}
-                        height={48}
-                        alt="Parent"
-                        className="object-cover"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-navy-blue">Mr. Okonkwo</h4>
-                    <p className="text-xs text-muted-foreground">Parent of Primary 5 Student</p>
-                  </div>
-                </div>
-                <p className="text-muted-foreground italic">
-                  "The holistic approach to education at Greatandy is impressive. My child is not only excelling
-                  academically but also developing practical skills and strong moral values."
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white animated-card">
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <div className="mr-4">
-                    <div className="h-12 w-12 rounded-full bg-navy-blue/10 overflow-hidden">
-                      <Image
-                        src="/placeholder.svg?height=48&width=48"
-                        width={48}
-                        height={48}
-                        alt="Parent"
-                        className="object-cover"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-navy-blue">Dr. Adeyemi</h4>
-                    <p className="text-xs text-muted-foreground">Parent of SSS3 Student</p>
-                  </div>
-                </div>
-                <p className="text-muted-foreground italic">
-                  "The quality of education and personal attention given to students at Greatandy is exceptional. The
-                  school has prepared my child well for university and beyond."
-                </p>
-              </CardContent>
-            </Card>
-          </div>
+          <TestimonialSlider />
         </div>
       </section>
     </main>
