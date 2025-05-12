@@ -69,16 +69,16 @@ export function SiteHeader() {
         { name: "Gallery", href: "/gallery" },
       ],
     },
-    {
-      name: "PROGRAMS",
-      href: "/programs",
-      dropdown: [
-        { name: "Music Program", href: "/programs#music" },
-        { name: "Catering & Culinary", href: "/programs#catering" },
-        { name: "Fashion Design", href: "/programs#fashion" },
-        { name: "Financial Literacy", href: "/programs#financial" },
-      ],
-    },
+    // {
+    //   name: "PROGRAMS",
+    //   href: "/programs",
+    //   dropdown: [
+    //     { name: "Music Program", href: "/programs#music" },
+    //     { name: "Catering & Culinary", href: "/programs#catering" },
+    //     { name: "Fashion Design", href: "/programs#fashion" },
+    //     { name: "Financial Literacy", href: "/programs#financial" },
+    //   ],
+    // },
     { name: "CONTACT", href: "/contact", dropdown: [] },
   ]
 
