@@ -224,42 +224,61 @@ export default function Home() {
             </div>
           </div>
           <div className="mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-2 lg:grid-cols-4">
-            <Card className="bg-white animated-card">
-              <CardContent className="p-6 flex flex-col items-center text-center">
-                <div className="h-12 w-12 rounded-full bg-navy-blue/10 flex items-center justify-center mb-4">
-                  <School className="h-6 w-6 text-school-blue" />
+            <Card className="overflow-hidden border-0 bg-gradient-to-br from-white to-blue-50 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+              <CardContent className="p-0">
+                <div className="bg-school-blue h-2 w-full"></div>
+                <div className="p-6 flex flex-col items-center text-center">
+                  <div className="h-16 w-16 rounded-full bg-navy-blue/10 flex items-center justify-center mb-5 border-2 border-school-blue/20">
+                    <School className="h-8 w-8 text-school-blue" />
+                  </div>
+                  <h3 className="text-lg font-bold mb-3 text-navy-blue">Ministry of Education</h3>
+                  <div className="w-12 h-0.5 bg-gold-yellow mb-3"></div>
+                  <p className="text-sm text-muted-foreground">Licensed by the Ministry of Education, Edo State</p>
                 </div>
-                <h3 className="text-lg font-bold mb-2 text-navy-blue">Ministry of Education</h3>
-                <p className="text-sm text-muted-foreground">Licensed by the Ministry of Education, Edo State</p>
               </CardContent>
             </Card>
-            <Card className="bg-white animated-card">
-              <CardContent className="p-6 flex flex-col items-center text-center">
-                <div className="h-12 w-12 rounded-full bg-navy-blue/10 flex items-center justify-center mb-4">
-                  <Award className="h-6 w-6 text-school-blue" />
+
+            <Card className="overflow-hidden border-0 bg-gradient-to-br from-white to-blue-50 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+              <CardContent className="p-0">
+                <div className="bg-school-blue h-2 w-full"></div>
+                <div className="p-6 flex flex-col items-center text-center">
+                  <div className="h-16 w-16 rounded-full bg-navy-blue/10 flex items-center justify-center mb-5 border-2 border-school-blue/20">
+                    <Award className="h-8 w-8 text-school-blue" />
+                  </div>
+                  <h3 className="text-lg font-bold mb-3 text-navy-blue">WAEC</h3>
+                  <div className="w-12 h-0.5 bg-gold-yellow mb-3"></div>
+                  <p className="text-sm text-muted-foreground">Certified examination center for WAEC</p>
                 </div>
-                <h3 className="text-lg font-bold mb-2 text-navy-blue">WAEC</h3>
-                <p className="text-sm text-muted-foreground">Certified examination center for WAEC</p>
               </CardContent>
             </Card>
-            <Card className="bg-white animated-card">
-              <CardContent className="p-6 flex flex-col items-center text-center">
-                <div className="h-12 w-12 rounded-full bg-navy-blue/10 flex items-center justify-center mb-4">
-                  <Award className="h-6 w-6 text-school-blue" />
+
+            <Card className="overflow-hidden border-0 bg-gradient-to-br from-white to-blue-50 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+              <CardContent className="p-0">
+                <div className="bg-school-blue h-2 w-full"></div>
+                <div className="p-6 flex flex-col items-center text-center">
+                  <div className="h-16 w-16 rounded-full bg-navy-blue/10 flex items-center justify-center mb-5 border-2 border-school-blue/20">
+                    <Award className="h-8 w-8 text-school-blue" />
+                  </div>
+                  <h3 className="text-lg font-bold mb-3 text-navy-blue">NECO</h3>
+                  <div className="w-12 h-0.5 bg-gold-yellow mb-3"></div>
+                  <p className="text-sm text-muted-foreground">Certified examination center for NECO</p>
                 </div>
-                <h3 className="text-lg font-bold mb-2 text-navy-blue">NECO</h3>
-                <p className="text-sm text-muted-foreground">Certified examination center for NECO</p>
               </CardContent>
             </Card>
-            <Card className="bg-white animated-card">
-              <CardContent className="p-6 flex flex-col items-center text-center">
-                <div className="h-12 w-12 rounded-full bg-navy-blue/10 flex items-center justify-center mb-4">
-                  <Users className="h-6 w-6 text-school-blue" />
+
+            <Card className="overflow-hidden border-0 bg-gradient-to-br from-white to-blue-50 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+              <CardContent className="p-0">
+                <div className="bg-school-blue h-2 w-full"></div>
+                <div className="p-6 flex flex-col items-center text-center">
+                  <div className="h-16 w-16 rounded-full bg-navy-blue/10 flex items-center justify-center mb-5 border-2 border-school-blue/20">
+                    <Users className="h-8 w-8 text-school-blue" />
+                  </div>
+                  <h3 className="text-lg font-bold mb-3 text-navy-blue">NAPPS</h3>
+                  <div className="w-12 h-0.5 bg-gold-yellow mb-3"></div>
+                  <p className="text-sm text-muted-foreground">
+                    Member of National Association of Proprietors of Private Schools
+                  </p>
                 </div>
-                <h3 className="text-lg font-bold mb-2 text-navy-blue">NAPPS</h3>
-                <p className="text-sm text-muted-foreground">
-                  Member of National Association of Proprietors of Private Schools
-                </p>
               </CardContent>
             </Card>
           </div>
