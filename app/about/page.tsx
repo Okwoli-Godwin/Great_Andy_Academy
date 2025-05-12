@@ -184,7 +184,7 @@ export default function AboutPage() {
       </section>
 
       {/* Welcome Message */}
-      <section className="py-16 bg-muted/50" id="welcome-message">
+      <section className="py-16 bg-muted/50 md:px-[45px]" id="welcome-message">
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
             <div className="space-y-4">
@@ -226,8 +226,8 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="flex justify-center lg:justify-end">
-              <div className="relative h-[400px] w-full max-w-[400px] overflow-hidden rounded-lg">
-                <Image src="/placeholder.svg?height=400&width=400" alt="Director" fill className="object-cover" />
+              <div className="relative h-[550px] w-full max-w-[410px] overflow-hidden rounded-lg shadow-xl">
+                <Image src="/dofoto.jpg" alt="Director" fill className="object-cover" />
               </div>
             </div>
           </div>
