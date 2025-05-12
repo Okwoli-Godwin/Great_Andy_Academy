@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Award, BookOpen, GraduationCap, Users, Shield, Heart, Lightbulb } from "lucide-react"
+import { Award, BookOpen, GraduationCap, Users, Shield, Heart, Lightbulb, Target, Eye } from "lucide-react"
 
 export default function AboutPage() {
   const values = [
@@ -54,12 +54,7 @@ export default function AboutPage() {
     <main className="flex-1">
       {/* Hero Section */}
       <section className="relative h-[300px] md:h-[400px]">
-        <Image
-          src="/playground.jpg"
-          alt="About Greatandy International Academy"
-          fill
-          className="object-cover"
-        />
+        <Image src="/playground.jpg" alt="About Greatandy International Academy" fill className="object-cover" />
         <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
           <div className="container text-center text-white px-4 md:px-6">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">About Us</h1>
@@ -71,28 +66,118 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-16 bg-white" id="mission-vision">
-        <div className="container px-4 md:px-6">
-          <div className="grid gap-12 md:grid-cols-2">
-            <div className="space-y-4">
-              <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Our Mission</div>
-              <h2 className="text-3xl font-bold tracking-tighter">Mission Statement</h2>
-              <p className="text-muted-foreground">
-                At Greatandy International Academy, we are dedicated to providing a holistic education that fosters
-                academic excellence, strong moral values, and lifelong discipline. We strive to empower students with
-                knowledge, character, and leadership skills essential for global relevance and impactful living.
-              </p>
+      <section className="py-20 bg-gradient-to-b from-white md:px-[45px] to-blue-50 relative overflow-hidden" id="mission-vision">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-30"></div>
+        <div className="absolute bottom-0 right-0 w-1/3 h-1/3 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+        <div className="absolute top-1/4 left-0 w-1/4 h-1/4 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+
+        <div className="container px-4 md:px-6 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-navy-blue mb-4">Our Guiding Principles</h2>
+            <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+              The foundation of our educational philosophy and commitment to excellence
+            </p>
+          </div>
+
+          <div className="grid gap-12 lg:grid-cols-2 items-stretch">
+            {/* Mission Card */}
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-primary/10">
+              <div className="h-2 bg-primary w-full"></div>
+              <div className="p-8 md:p-10 flex flex-col h-full">
+                <div className="flex items-center mb-6">
+                  <div className="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center mr-5 border-2 border-primary/20">
+                    <Target className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary mb-2">
+                      Our Mission
+                    </div>
+                    <h2 className="text-2xl font-bold tracking-tighter text-navy-blue">Mission Statement</h2>
+                  </div>
+                </div>
+
+                <div className="bg-blue-50/50 rounded-xl p-6 mb-6 border-l-4 border-primary relative">
+                  <div className="absolute -top-2 -left-2 text-primary/20 text-6xl font-serif">"</div>
+                  <p className="text-muted-foreground text-lg relative z-10">
+                    At Greatandy International Academy, we are dedicated to providing a holistic education that fosters
+                    academic excellence, strong moral values, and lifelong discipline. We strive to empower students
+                    with knowledge, character, and leadership skills essential for global relevance and impactful
+                    living.
+                  </p>
+                  <div className="absolute -bottom-2 -right-2 text-primary/20 text-6xl font-serif">"</div>
+                </div>
+
+                <div className="mt-auto">
+                  <h3 className="font-bold text-navy-blue mb-2">Our Commitment</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-center">
+                      <div className="h-2 w-2 rounded-full bg-primary mr-2"></div>
+                      <span className="text-sm text-muted-foreground">Holistic Education</span>
+                    </li>
+                    <li className="flex items-center">
+                      <div className="h-2 w-2 rounded-full bg-primary mr-2"></div>
+                      <span className="text-sm text-muted-foreground">Character Development</span>
+                    </li>
+                    <li className="flex items-center">
+                      <div className="h-2 w-2 rounded-full bg-primary mr-2"></div>
+                      <span className="text-sm text-muted-foreground">Global Relevance</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div className="space-y-4">
-              <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Our Vision</div>
-              <h2 className="text-3xl font-bold tracking-tighter">Vision Statement</h2>
-              <p className="text-muted-foreground">
-                <strong>Motto: Bringing Up Greater Academicians and Disciplined Personnel.</strong>
-              </p>
-              <p className="text-muted-foreground">
-                To be a leading citadel of learning committed to nurturing outstanding, illuminated personalities who
-                inspire excellence, integrity, and innovation in every sphere of life.
-              </p>
+
+            {/* Vision Card */}
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-primary/10">
+              <div className="h-2 bg-primary w-full"></div>
+              <div className="p-8 md:p-10 flex flex-col h-full">
+                <div className="flex items-center mb-6">
+                  <div className="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center mr-5 border-2 border-primary/20">
+                    <Eye className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary mb-2">
+                      Our Vision
+                    </div>
+                    <h2 className="text-2xl font-bold tracking-tighter text-navy-blue">Vision Statement</h2>
+                  </div>
+                </div>
+
+                <div className="bg-blue-50/50 rounded-xl p-6 mb-6 border-l-4 border-primary relative">
+                  <div className="absolute -top-2 -left-2 text-primary/20 text-6xl font-serif">"</div>
+                  <p className="text-muted-foreground text-lg relative z-10">
+                    To be a leading citadel of learning committed to nurturing outstanding, illuminated personalities
+                    who inspire excellence, integrity, and innovation in every sphere of life.
+                  </p>
+                  <div className="absolute -bottom-2 -right-2 text-primary/20 text-6xl font-serif">"</div>
+                </div>
+
+                <div className="bg-primary/5 rounded-xl p-6 border border-primary/10">
+                  <h3 className="font-bold text-navy-blue mb-3 text-center">Our Motto</h3>
+                  <p className="text-center text-lg font-medium text-primary">
+                    "Bringing Up Greater Academicians and Disciplined Personnel"
+                  </p>
+                </div>
+
+                <div className="mt-6">
+                  <h3 className="font-bold text-navy-blue mb-2">Our Aspiration</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-center">
+                      <div className="h-2 w-2 rounded-full bg-primary mr-2"></div>
+                      <span className="text-sm text-muted-foreground">Academic Excellence</span>
+                    </li>
+                    <li className="flex items-center">
+                      <div className="h-2 w-2 rounded-full bg-primary mr-2"></div>
+                      <span className="text-sm text-muted-foreground">Moral Leadership</span>
+                    </li>
+                    <li className="flex items-center">
+                      <div className="h-2 w-2 rounded-full bg-primary mr-2"></div>
+                      <span className="text-sm text-muted-foreground">Global Impact</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
