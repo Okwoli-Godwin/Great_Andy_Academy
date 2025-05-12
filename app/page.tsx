@@ -69,21 +69,21 @@ export default function Home() {
         <HeroSlider />
 
         {/* Large Logo at Bottom */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10">
-          <div className="bg-maroon-red w-[150px] h-[150px] rounded-full flex items-center justify-center shadow-xl">
+        <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 ">
+          <div className=" w-[1300px] mb-[-60px] relative h-[1300px]  flex items-center justify-center ">
             <Image
-              src="/placeholder.svg?height=120&width=120"
-              width={120}
-              height={120}
+              src="/whiteblur.png"
+              width={1200}
+              height={1200}
               alt="Greatandy International Academy Logo"
-              className="rounded-full"
+              className="rounded-full absolute bottom-0"
             />
           </div>
         </div>
       </section>
 
       {/* Welcome Message */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white px-[45px] ">
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
             <div className="space-y-4">

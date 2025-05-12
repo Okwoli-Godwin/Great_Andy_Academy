@@ -1,0 +1,57 @@
+/* Wave styling */
+.hero-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 5;
+    pointer-events: none;
+  }
+  
+  .hero-wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px; /* Adjust height as needed */
+  }
+  
+  .single-wave {
+    fill: rgba(255, 215, 0, 0.8); /* Gold color with transparency */
+    filter: drop-shadow(0 -6px 8px rgba(0, 48, 135, 0.3)); /* Blue shadow for depth */
+    animation: wave-float 12s ease-in-out infinite alternate;
+  }
+  
+  /* Wave animation */
+  @keyframes wave-float {
+    0% {
+      transform: translateX(-25px);
+    }
+    50% {
+      transform: translateX(15px);
+    }
+    100% {
+      transform: translateX(-25px);
+    }
+  }
+  
+  /* Slow bounce animation for the Open House button */
+  @keyframes bounce-slow {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .animate-bounce-slow {
+    animation: bounce-slow 3s infinite;
+  }
+  
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  

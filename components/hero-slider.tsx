@@ -1,39 +1,59 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import Image from "next/image"
+import { useState, useEffect, useRef } from "react"
 import { cn } from "@/lib/utils"
 
 export function HeroSlider() {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([])
 
   const slides = [
     {
-      image: "/placeholder.svg?height=600&width=1200",
+      video: "/videos/school1.mp4", // Update with your actual video path
       alt: "School building",
       title: "The Greatandy Difference...",
       subtitle: "CHARACTER · CONFIDENCE · KNOWLEDGE",
     },
     {
-      image: "/placeholder.svg?height=600&width=1200",
+      video: "/videos/school2.mp4", // Update with your actual video path
       alt: "Students in classroom",
       title: "Academic Excellence",
       subtitle: "Nurturing Minds, Building Futures",
     },
     {
-      image: "/placeholder.svg?height=600&width=1200",
+      video: "/videos/school3.mp4", // Update with your actual video path
       alt: "School activities",
       title: "Holistic Education",
       subtitle: "Developing Character and Skills for Life",
     },
   ]
 
+  // Handle slide transitions
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
     }, 5000)
     return () => clearInterval(interval)
   }, [slides.length])
+
+  // Handle video playback when slide changes
+  useEffect(() => {
+    // Pause all videos
+    videoRefs.current.forEach((video) => {
+      if (video) {
+        video.pause()
+      }
+    })
+
+    // Play the current video
+    const currentVideo = videoRefs.current[currentSlide]
+    if (currentVideo) {
+      currentVideo.currentTime = 0
+      currentVideo.play().catch((error) => {
+        console.error("Video playback failed:", error)
+      })
+    }
+  }, [currentSlide])
 
   return (
     <div className="relative h-[500px] md:h-[600px] w-full overflow-hidden">
@@ -45,19 +65,23 @@ export function HeroSlider() {
             index === currentSlide ? "opacity-100" : "opacity-0",
           )}
         >
-          <Image
-            src={slide.image || "/placeholder.svg"}
-            alt={slide.alt}
-            fill
-            className="object-cover"
-            priority={index === 0}
+          <video
+            ref={(el) => {
+              videoRefs.current[index] = el
+            }}
+            src={slide.video}
+            muted
+            playsInline
+            loop
+            className="object-cover h-full w-full"
+            aria-label={slide.alt}
           />
           <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
             <div className="text-center text-white px-4">
               <h1 className="text-school-blue text-4xl md:text-5xl lg:text-6xl font-serif italic mb-4 text-shadow">
                 {slide.title}
               </h1>
-              <div className="text-gold-yellow text-xl md:text-2xl font-medium mt-8 tracking-wider text-shadow">
+              <div className="text-gold-yellow text-xl md:text-2xl font-medium mt-8 tracking-wider text-shadow z-20">
                 {slide.subtitle}
               </div>
             </div>
@@ -80,12 +104,13 @@ export function HeroSlider() {
         ))}
       </div>
 
-      {/* Wave overlay */}
+      {/* Single Wave Overlay */}
       <div className="hero-wave">
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
           <path
-            d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-            className="shape-fill"
+            fill="#FFFFFF"
+            className="single-wave"
+            d="M0,160L48,144C96,128,192,96,288,90.7C384,85,480,107,576,138.7C672,171,768,213,864,240C960,267,1056,277,1152,250.7C1248,224,1344,160,1392,128L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
           ></path>
         </svg>
       </div>

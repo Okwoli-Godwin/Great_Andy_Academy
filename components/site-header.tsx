@@ -88,23 +88,23 @@ export function SiteHeader() {
       <div className="bg-navy-blue text-white py-2">
         <div className="container flex justify-between items-center">
           <div className="flex items-center space-x-4">
-            <div className="flex items-center text-sm">
+            {/* <div className="flex items-center text-sm">
               <Phone className="h-4 w-4 mr-2" />
               <span>+2347068004110 | +2348056157345</span>
-            </div>
-            <div className="hidden md:flex items-center text-sm">
+            </div> */}
+            {/* <div className="hidden md:flex items-center text-sm">
               <Mail className="h-4 w-4 mr-2" />
               <span>greatandyinternationalacademy@gmail.com</span>
-            </div>
+            </div> */}
           </div>
-          <div className="flex space-x-4">
+          {/* <div className="flex space-x-4">
             <Link href="/calendar" className="text-sm hover:text-gold-yellow transition-colors">
               School Calendar
             </Link>
             <Link href="/parent" className="text-sm hover:text-gold-yellow transition-colors">
               Parent Portal
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -112,7 +112,7 @@ export function SiteHeader() {
       <div
         className={cn("bg-navy-blue border-t border-navy-blue/30 transition-all duration-300", scrolled && "shadow-md")}
       >
-        <div className="container flex h-16 items-center justify-between">
+        <div className=" px-[55px] flex h-16 items-center justify-between">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
               <div
