@@ -88,7 +88,7 @@ export default function Home() {
       </section>
 
       {/* Welcome Message */}
-      <section className="py-16 bg-white px-[45px] ">
+      <section className="py-16 bg-white md:px-[45px] ">
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
             <div className="space-y-4">
@@ -319,7 +319,7 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-school-blue text-white px-[45px]">
+      <section className="py-16 bg-school-blue text-white md:px-[45px]">
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
             <div className="space-y-4">
