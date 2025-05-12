@@ -318,7 +318,7 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-school-blue text-white">
+      <section className="py-16 bg-school-blue text-white px-[45px]">
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
             <div className="space-y-4">
@@ -333,14 +333,14 @@ export default function Home() {
                 <Button asChild size="lg" className="bg-white text-school-blue hover:bg-white/90">
                   <Link href="/admissions">Apply Now</Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-white hover:bg-white/10">
+                <Button asChild size="lg" className="bg-white text-school-blue hover:bg-white/90">
                   <Link href="/contact">Contact Us</Link>
                 </Button>
               </div>
             </div>
             <div className="flex justify-center lg:justify-end">
               <div className="relative h-[300px] w-full max-w-[500px] overflow-hidden rounded-lg shadow-xl">
-                <Image src="/placeholder.svg?height=300&width=500" alt="Students" fill className="object-cover" />
+                <Image src="/engineers.jpeg" alt="Students" fill className="object-cover" />
               </div>
             </div>
           </div>
