@@ -41,27 +41,30 @@ export default function Home() {
       description: "Discover. Create. Perform.",
       details:
         "Our music program fosters artistic expression through vocal training, musical instruments, and theory. Students gain confidence, discipline, and stage experience through performances, school events, and competitions.",
+      backgroundImage: "/music.webp",
     },
     {
       title: "Catering & Culinary Arts",
       description: "From Kitchen to Career.",
       details:
         "Students learn the essentials of cooking, food presentation, nutrition, and hospitality. This program opens doors to careers in catering and equips students with valuable life skills in food preparation and hygiene.",
+      backgroundImage: "/meat.jpg",
     },
     {
       title: "Fashion Design",
       description: "Design Your Future.",
       details:
         "Our fashion program trains students in sewing, sketching, fabric selection, and modern trends. It encourages entrepreneurship and innovation while developing practical skills in clothing design and personal style.",
+      backgroundImage: "/fashion.jpg",
     },
     {
       title: "Financial Literacy & Entrepreneurship",
       description: "Think Smart. Build Wealth.",
       details:
         "This program introduces students to saving, budgeting, investing, and business planning. It instills financial responsibility and inspires young entrepreneurs to create, lead, and thrive in today's economy.",
+      backgroundImage: "/finance.jpg",
     },
   ]
-
   return (
     <main className="flex-1">
       {/* Hero Section */}
@@ -120,7 +123,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex justify-center lg:justify-end">
-              <div className="relative h-[550px] w-full max-w-[400px] overflow-hidden rounded-lg shadow-xl">
+              <div className="relative h-[550px] w-full max-w-[410px] overflow-hidden rounded-lg shadow-xl">
                 <Image src="/dofoto.jpg" alt="Director" fill className="object-cover" />
               </div>
             </div>
@@ -187,16 +190,17 @@ export default function Home() {
                 title={program.title}
                 description={program.description}
                 details={program.details}
+                backgroundImage={program.backgroundImage}
               />
             ))}
           </div>
-          <div className="text-center">
+          {/* <div className="text-center">
             <Button asChild className="bg-school-blue hover:bg-school-blue/90 text-white">
               <Link href="/programs" className="inline-flex items-center">
                 Explore All Programs <ChevronRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-          </div>
+          </div> */}
         </div>
       </section>
 

@@ -1,27 +1,34 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { cn } from "@/lib/utils"
+import Image from "next/image"
 
 interface ProgramCardProps {
   title: string
   description: string
   details: string
-  className?: string
+  backgroundImage?: string
 }
 
-export function ProgramCard({ title, description, details, className }: ProgramCardProps) {
+export function ProgramCard({ title, description, details, backgroundImage }: ProgramCardProps) {
   return (
-    <Card className={cn("bg-white overflow-hidden animated-card", className)}>
-      <CardContent className="p-0">
-        <div className="h-40 bg-navy-blue flex items-center justify-center">
-          <div className="text-center p-4">
-            <h3 className="text-xl font-bold text-gold-yellow">{title}</h3>
-            <p className="text-sm italic text-white">{description}</p>
+    <Card className="animated-card overflow-hidden">
+      <div className="relative">
+        {backgroundImage && (
+          <div className="relative h-48 w-full">
+            <Image
+              src={backgroundImage || "/placeholder.svg"}
+              alt={`${title} background`}
+              fill
+              className="object-cover opacity-80"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/40"></div>
           </div>
-        </div>
-        <div className="p-6">
+        )}
+        <CardContent className={`p-6 ${backgroundImage ? "pt-4" : "pt-6"}`}>
+          <h3 className="text-xl font-bold mb-1 text-navy-blue">{title}</h3>
+          <p className="text-sm font-medium text-school-blue mb-3">{description}</p>
           <p className="text-sm text-muted-foreground">{details}</p>
-        </div>
-      </CardContent>
+        </CardContent>
+      </div>
     </Card>
   )
 }
