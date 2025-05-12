@@ -10,7 +10,7 @@ export default function AcademicsPage() {
       {/* Hero Section */}
       <section className="relative h-[300px] md:h-[400px]">
         <Image
-          src="/placeholder.svg?height=400&width=1200"
+          src="/acad.jpg"
           alt="Academics at Greatandy International Academy"
           fill
           className="object-cover"

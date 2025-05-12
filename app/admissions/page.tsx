@@ -199,7 +199,7 @@ export default function AdmissionsPage() {
           </div>
         </section>
 
-        <div className="flex flex-col sm:flex-row justify-center gap-4 mt-12">
+        {/* <div className="flex flex-col sm:flex-row justify-center gap-4 mt-12">
           <Button className="bg-bridges-red hover:bg-red-800 text-white px-8 py-6 text-lg rounded-lg">Apply Now</Button>
           <Button
             variant="outline"
@@ -213,7 +213,7 @@ export default function AdmissionsPage() {
           >
             Schedule a Tour
           </Button>
-        </div>
+        </div> */}
       </div>
     </div>
   )
