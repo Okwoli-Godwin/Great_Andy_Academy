@@ -120,8 +120,8 @@ export default function Home() {
               </div>
             </div>
             <div className="flex justify-center lg:justify-end">
-              <div className="relative h-[400px] w-full max-w-[400px] overflow-hidden rounded-lg shadow-xl">
-                <Image src="/placeholder.svg?height=400&width=400" alt="Director" fill className="object-cover" />
+              <div className="relative h-[550px] w-full max-w-[400px] overflow-hidden rounded-lg shadow-xl">
+                <Image src="/dofoto.jpg" alt="Director" fill className="object-cover" />
               </div>
             </div>
           </div>
