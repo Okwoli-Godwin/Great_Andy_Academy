@@ -6,6 +6,7 @@ import { ChevronRight, GraduationCap, BookOpen, Users, Award, School } from "luc
 import { HeroSlider } from "@/components/hero-slider"
 import { ValueCard } from "@/components/value-card"
 import { ProgramCard } from "@/components/program-card"
+import { CountUpNumber } from "@/components/count-up-number"
 
 export default function Home() {
   const values = [
@@ -297,19 +298,19 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="space-y-2">
-              <div className="text-4xl font-bold text-gold-yellow">2018</div>
+              <CountUpNumber end={2018} duration={2000} className="text-4xl font-bold text-gold-yellow" />
               <p className="text-sm">Year Founded</p>
             </div>
             <div className="space-y-2">
-              <div className="text-4xl font-bold text-gold-yellow">500+</div>
+              <CountUpNumber end={500} suffix="+" duration={2000} className="text-4xl font-bold text-gold-yellow" />
               <p className="text-sm">Students</p>
             </div>
             <div className="space-y-2">
-              <div className="text-4xl font-bold text-gold-yellow">50+</div>
+              <CountUpNumber end={50} suffix="+" duration={2000} className="text-4xl font-bold text-gold-yellow" />
               <p className="text-sm">Qualified Teachers</p>
             </div>
             <div className="space-y-2">
-              <div className="text-4xl font-bold text-gold-yellow">4</div>
+              <CountUpNumber end={4} duration={1500} className="text-4xl font-bold text-gold-yellow" />
               <p className="text-sm">Major Awards</p>
             </div>
           </div>
