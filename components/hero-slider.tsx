@@ -116,18 +116,18 @@ export function HeroSlider() {
       </div>
 
       {/* Open House Button */}
-      <div className="absolute top-4 right-4 animate-bounce-slow">
+      {/* <div className="absolute top-4 right-4 animate-bounce-slow">
         <button className="bg-school-blue text-white px-4 py-2 rounded-full font-medium hover:bg-school-blue/90 transition-colors shadow-lg">
           Open House
         </button>
-      </div>
+      </div> */}
 
       {/* Contact Us Button */}
-      <div className="absolute top-1/3 right-4">
+      {/* <div className="absolute top-1/3 right-4">
         <button className="bg-gold-yellow text-navy-blue px-4 py-2 rounded-full font-medium hover:bg-gold-yellow/90 transition-colors shadow-lg">
           Contact Us!
         </button>
-      </div>
+      </div> */}
     </div>
   )
 }

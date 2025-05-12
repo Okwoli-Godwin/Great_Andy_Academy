@@ -69,7 +69,7 @@ export default function Home() {
         <HeroSlider />
 
         {/* Large Logo at Bottom */}
-        <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 ">
+        {/* <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 ">
           <div className=" w-[1300px] mb-[-60px] relative h-[1300px]  flex items-center justify-center ">
             <Image
               src="/whiteblur.png"
@@ -79,7 +79,7 @@ export default function Home() {
               className="rounded-full absolute bottom-0"
             />
           </div>
-        </div>
+        </div> */}
       </section>
 
       {/* Welcome Message */}
