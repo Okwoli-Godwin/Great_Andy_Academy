@@ -55,7 +55,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative h-[300px] md:h-[400px]">
         <Image
-          src="/placeholder.svg?height=400&width=1200"
+          src="/playground.jpg"
           alt="About Greatandy International Academy"
           fill
           className="object-cover"
