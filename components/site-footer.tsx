@@ -11,14 +11,14 @@ export function SiteFooter() {
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="relative h-12 w-12 bg-school-blue rounded-lg overflow-hidden flex items-center justify-center">
+              {/* <div className="relative h-12 w-12 bg-school-blue rounded-lg overflow-hidden flex items-center justify-center"> */}
                 <Image
-                  src="/placeholder.svg?height=40&width=40"
+                  src="/great.jpg"
                   alt="Greatandy International Academy"
-                  width={40}
-                  height={40}
+                  width={80}
+                  height={80}
                 />
-              </div>
+              {/* </div> */}
               <div>
                 <div className="text-lg font-bold">GREATANDY</div>
                 <div className="text-xs">INTERNATIONAL ACADEMY</div>
@@ -26,7 +26,7 @@ export function SiteFooter() {
             </Link>
             <p className="text-sm">Bringing Up Greater Academicians and Disciplined Personnel.</p>
             <div className="flex space-x-4">
-              <Link href="#" className="hover:text-gold-yellow transition-colors">
+              <Link href="https://www.facebook.com/okpellatv/videos/2040379193131613/?app=fbl" className="hover:text-gold-yellow transition-colors">
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </Link>
