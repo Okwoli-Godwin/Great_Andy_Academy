@@ -3,6 +3,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { BookOpen, Calculator, FlaskRoundIcon as Flask, Globe, Music, Palette, Code } from "lucide-react"
 
 export default function AcademicsPage() {
   const specialPrograms = [
@@ -92,6 +93,147 @@ export default function AcademicsPage() {
     },
   ]
 
+  // Subject categories with icons
+  const subjectCategories = {
+    primary: [
+      {
+        name: "Core Subjects",
+        icon: BookOpen,
+        color: "from-blue-500 to-blue-700",
+        subjects: [
+          "English Language",
+          "Mathematics",
+          "Basic Science and Technology",
+          "Civic Education",
+          "Cultural and Creative Arts",
+          "Christian Religious Studies / Islamic Religious Studies",
+          "Physical and Health Education",
+          "Nigerian Languages (Edo, Yoruba, Igbo, Hausa)",
+          "Social Studies",
+        ],
+      },
+      {
+        name: "Pre-Vocational and Enrichment",
+        icon: Palette,
+        color: "from-purple-500 to-purple-700",
+        subjects: [
+          "Agricultural Science",
+          "Home Economics",
+          "Computer Studies / ICT",
+          "Moral Instruction",
+          "French",
+          "Music",
+          "Verbal and Quantitative Reasoning",
+          "Handwriting",
+          "Phonics and Spelling",
+        ],
+      },
+    ],
+    junior: [
+      {
+        name: "Core Subjects",
+        icon: BookOpen,
+        color: "from-green-500 to-green-700",
+        subjects: [
+          "English Language",
+          "Mathematics",
+          "Basic Science",
+          "Social Studies",
+          "Civic Education",
+          "Christian Religious Studies / Islamic Religious Studies",
+          "Cultural and Creative Arts",
+          "Basic Technology",
+          "Physical and Health Education",
+          "Agricultural Science",
+          "Business Studies",
+          "Computer Studies / ICT",
+          "Nigerian Languages",
+          "French",
+        ],
+      },
+      {
+        name: "Electives (Optional)",
+        icon: Music,
+        color: "from-amber-500 to-amber-700",
+        subjects: ["Home Economics", "Music", "Arabic", "Entrepreneurship Education"],
+      },
+    ],
+    senior: [
+      {
+        name: "Science Subjects",
+        icon: Flask,
+        color: "from-blue-500 to-blue-700",
+        subjects: [
+          "Mathematics",
+          "English Language",
+          "Physics",
+          "Chemistry",
+          "Biology",
+          "Agricultural Science",
+          "Further Mathematics",
+          "Computer Studies / ICT",
+          "Technical Drawing",
+          "Geography",
+          "Health Science",
+          "Physical Education",
+        ],
+      },
+      {
+        name: "Commercial Subjects",
+        icon: Calculator,
+        color: "from-emerald-500 to-emerald-700",
+        subjects: [
+          "Mathematics",
+          "English Language",
+          "Economics",
+          "Accounting",
+          "Commerce",
+          "Marketing",
+          "Office Practice",
+          "Insurance",
+          "Business Studies",
+          "Financial Accounting",
+        ],
+      },
+      {
+        name: "Arts and Humanities",
+        icon: Globe,
+        color: "from-purple-500 to-purple-700",
+        subjects: [
+          "Government",
+          "Literature in English",
+          "Christian Religious Studies / Islamic Religious Studies",
+          "History",
+          "Civic Education",
+          "Visual Arts",
+          "Music",
+          "French",
+          "Nigerian Languages",
+          "Arabic",
+          "Social Studies",
+        ],
+      },
+      {
+        name: "Vocational / Technical",
+        icon: Code,
+        color: "from-orange-500 to-orange-700",
+        subjects: [
+          "Home Management",
+          "Clothing and Textiles",
+          "Food and Nutrition",
+          "Animal Husbandry",
+          "Fisheries",
+          "Carpentry and Joinery",
+          "Electrical Installation",
+          "Welding and Fabrication",
+          "Data Processing",
+          "Building Construction",
+          "Auto Mechanics",
+        ],
+      },
+    ],
+  }
+
   return (
     <main className="flex-1">
       {/* Hero Section */}
@@ -172,7 +314,7 @@ export default function AcademicsPage() {
       </section>
 
       {/* Subjects Offered */}
-      <section className="py-16 bg-muted/50">
+      <section className="py-16 bg-gradient-to-b from-muted/50 to-muted">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
             <div className="space-y-2">
@@ -186,166 +328,194 @@ export default function AcademicsPage() {
             </div>
           </div>
 
-          <Tabs defaultValue="primary" className="max-w-4xl mx-auto">
-            <TabsList className="grid w-full grid-cols-3">
-              <TabsTrigger value="primary">Primary School</TabsTrigger>
-              <TabsTrigger value="junior">Junior Secondary</TabsTrigger>
-              <TabsTrigger value="senior">Senior Secondary</TabsTrigger>
-            </TabsList>
-            <TabsContent value="primary" className="mt-6">
-              <Card>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-4">PRIMARY SCHOOL SUBJECTS (Basic 1–6)</h3>
+          <div className="relative">
+            <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
+              <div className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full border-8 border-primary"></div>
+              <div className="absolute top-1/2 right-1/4 w-24 h-24 rounded-full border-8 border-primary"></div>
+              <div className="absolute bottom-1/4 left-1/3 w-16 h-16 rounded-full border-8 border-primary"></div>
+            </div>
 
-                  <div className="grid gap-8 md:grid-cols-2">
-                    <div>
-                      <h4 className="font-bold mb-2">Core Subjects:</h4>
-                      <ul className="space-y-1 text-muted-foreground">
-                        <li>English Language</li>
-                        <li>Mathematics</li>
-                        <li>Basic Science and Technology</li>
-                        <li>Civic Education</li>
-                        <li>Cultural and Creative Arts</li>
-                        <li>Christian Religious Studies / Islamic Religious Studies</li>
-                        <li>Physical and Health Education</li>
-                        <li>Nigerian Languages (Edo, Yoruba, Igbo, Hausa)</li>
-                        <li>Social Studies</li>
-                      </ul>
-                    </div>
+            <Tabs defaultValue="primary" className="max-w-5xl mx-auto">
+              <div className="bg-white p-4 rounded-lg shadow-md mb-6">
+                <TabsList className="grid w-full grid-cols-3 p-1 bg-muted/30">
+                  <TabsTrigger
+                    value="primary"
+                    className="data-[state=active]:bg-primary data-[state=active]:text-white rounded-md transition-all"
+                  >
+                    Primary School
+                  </TabsTrigger>
+                  <TabsTrigger
+                    value="junior"
+                    className="data-[state=active]:bg-primary data-[state=active]:text-white rounded-md transition-all"
+                  >
+                    Junior Secondary
+                  </TabsTrigger>
+                  <TabsTrigger
+                    value="senior"
+                    className="data-[state=active]:bg-primary data-[state=active]:text-white rounded-md transition-all"
+                  >
+                    Senior Secondary
+                  </TabsTrigger>
+                </TabsList>
+              </div>
 
-                    <div>
-                      <h4 className="font-bold mb-2">Pre-Vocational and Enrichment Subjects:</h4>
-                      <ul className="space-y-1 text-muted-foreground">
-                        <li>Agricultural Science</li>
-                        <li>Home Economics</li>
-                        <li>Computer Studies / ICT</li>
-                        <li>Moral Instruction</li>
-                        <li>French</li>
-                        <li>Music</li>
-                        <li>Verbal and Quantitative Reasoning</li>
-                        <li>Handwriting</li>
-                        <li>Phonics and Spelling</li>
-                      </ul>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </TabsContent>
+              <TabsContent value="primary" className="mt-6 space-y-6">
+                <div className="grid gap-6 md:grid-cols-2">
+                  {subjectCategories.primary.map((category, index) => {
+                    const Icon = category.icon
+                    return (
+                      <Card
+                        key={index}
+                        className="overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+                      >
+                        <div className={`h-16 bg-gradient-to-r ${category.color} relative overflow-hidden`}>
+                          {/* Decorative pattern */}
+                          <div className="absolute inset-0 opacity-10">
+                            <div className="absolute top-0 left-0 w-full h-full grid grid-cols-8 gap-1">
+                              {Array.from({ length: 32 }).map((_, i) => (
+                                <div key={i} className="w-full h-8 bg-white/20 rounded-full transform rotate-45"></div>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                        <CardContent className="p-6 pt-10 relative">
+                          {/* Icon */}
+                          <div className="absolute -top-8 left-6">
+                            <div className="h-16 w-16 rounded-full bg-white shadow-lg flex items-center justify-center p-1">
+                              <div
+                                className={`h-full w-full rounded-full bg-gradient-to-br ${category.color} flex items-center justify-center`}
+                              >
+                                <Icon className="h-8 w-8 text-white" />
+                              </div>
+                            </div>
+                          </div>
 
-            <TabsContent value="junior" className="mt-6">
-              <Card>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-4">JUNIOR SECONDARY SCHOOL SUBJECTS (JSS 1–3)</h3>
+                          <div className="ml-14">
+                            <h3 className="text-xl font-bold mb-4">{category.name}</h3>
+                            <div className="grid grid-cols-1 gap-2">
+                              {category.subjects.map((subject, idx) => (
+                                <div
+                                  key={idx}
+                                  className="flex items-center p-2 rounded-md hover:bg-muted/50 transition-colors"
+                                >
+                                  <div className="h-2 w-2 rounded-full bg-primary mr-3"></div>
+                                  <span className="text-muted-foreground">{subject}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    )
+                  })}
+                </div>
+              </TabsContent>
 
-                  <div className="grid gap-8 md:grid-cols-2">
-                    <div>
-                      <h4 className="font-bold mb-2">Core Subjects:</h4>
-                      <ul className="space-y-1 text-muted-foreground">
-                        <li>English Language</li>
-                        <li>Mathematics</li>
-                        <li>Basic Science</li>
-                        <li>Social Studies</li>
-                        <li>Civic Education</li>
-                        <li>Christian Religious Studies / Islamic Religious Studies</li>
-                        <li>Cultural and Creative Arts</li>
-                        <li>Basic Technology</li>
-                        <li>Physical and Health Education</li>
-                        <li>Agricultural Science</li>
-                        <li>Business Studies</li>
-                        <li>Computer Studies / ICT</li>
-                        <li>Nigerian Languages</li>
-                        <li>French</li>
-                      </ul>
-                    </div>
+              <TabsContent value="junior" className="mt-6 space-y-6">
+                <div className="grid gap-6 md:grid-cols-2">
+                  {subjectCategories.junior.map((category, index) => {
+                    const Icon = category.icon
+                    return (
+                      <Card
+                        key={index}
+                        className="overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+                      >
+                        <div className={`h-16 bg-gradient-to-r ${category.color} relative overflow-hidden`}>
+                          {/* Decorative pattern */}
+                          <div className="absolute inset-0 opacity-10">
+                            <div className="absolute top-0 left-0 w-full h-full grid grid-cols-8 gap-1">
+                              {Array.from({ length: 32 }).map((_, i) => (
+                                <div key={i} className="w-full h-8 bg-white/20 rounded-full transform rotate-45"></div>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                        <CardContent className="p-6 pt-10 relative">
+                          {/* Icon */}
+                          <div className="absolute -top-8 left-6">
+                            <div className="h-16 w-16 rounded-full bg-white shadow-lg flex items-center justify-center p-1">
+                              <div
+                                className={`h-full w-full rounded-full bg-gradient-to-br ${category.color} flex items-center justify-center`}
+                              >
+                                <Icon className="h-8 w-8 text-white" />
+                              </div>
+                            </div>
+                          </div>
 
-                    <div>
-                      <h4 className="font-bold mb-2">Electives (Optional):</h4>
-                      <ul className="space-y-1 text-muted-foreground">
-                        <li>Home Economics</li>
-                        <li>Music</li>
-                        <li>Arabic</li>
-                        <li>Entrepreneurship Education</li>
-                      </ul>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </TabsContent>
+                          <div className="ml-14">
+                            <h3 className="text-xl font-bold mb-4">{category.name}</h3>
+                            <div className="grid grid-cols-1 gap-2">
+                              {category.subjects.map((subject, idx) => (
+                                <div
+                                  key={idx}
+                                  className="flex items-center p-2 rounded-md hover:bg-muted/50 transition-colors"
+                                >
+                                  <div className="h-2 w-2 rounded-full bg-primary mr-3"></div>
+                                  <span className="text-muted-foreground">{subject}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    )
+                  })}
+                </div>
+              </TabsContent>
 
-            <TabsContent value="senior" className="mt-6">
-              <Card>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-4">SENIOR SECONDARY SCHOOL SUBJECTS (SSS 1–3)</h3>
+              <TabsContent value="senior" className="mt-6 space-y-6">
+                <div className="grid gap-6 md:grid-cols-2">
+                  {subjectCategories.senior.map((category, index) => {
+                    const Icon = category.icon
+                    return (
+                      <Card
+                        key={index}
+                        className="overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+                      >
+                        <div className={`h-16 bg-gradient-to-r ${category.color} relative overflow-hidden`}>
+                          {/* Decorative pattern */}
+                          <div className="absolute inset-0 opacity-10">
+                            <div className="absolute top-0 left-0 w-full h-full grid grid-cols-8 gap-1">
+                              {Array.from({ length: 32 }).map((_, i) => (
+                                <div key={i} className="w-full h-8 bg-white/20 rounded-full transform rotate-45"></div>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                        <CardContent className="p-6 pt-10 relative">
+                          {/* Icon */}
+                          <div className="absolute -top-8 left-6">
+                            <div className="h-16 w-16 rounded-full bg-white shadow-lg flex items-center justify-center p-1">
+                              <div
+                                className={`h-full w-full rounded-full bg-gradient-to-br ${category.color} flex items-center justify-center`}
+                              >
+                                <Icon className="h-8 w-8 text-white" />
+                              </div>
+                            </div>
+                          </div>
 
-                  <div className="grid gap-8 md:grid-cols-2">
-                    <div>
-                      <h4 className="font-bold mb-2">Science Subjects:</h4>
-                      <ul className="space-y-1 text-muted-foreground">
-                        <li>Mathematics</li>
-                        <li>English Language</li>
-                        <li>Physics</li>
-                        <li>Chemistry</li>
-                        <li>Biology</li>
-                        <li>Agricultural Science</li>
-                        <li>Further Mathematics</li>
-                        <li>Computer Studies / ICT</li>
-                        <li>Technical Drawing</li>
-                        <li>Geography</li>
-                        <li>Health Science</li>
-                        <li>Physical Education</li>
-                      </ul>
-
-                      <h4 className="font-bold mt-6 mb-2">Commercial Subjects:</h4>
-                      <ul className="space-y-1 text-muted-foreground">
-                        <li>Mathematics</li>
-                        <li>English Language</li>
-                        <li>Economics</li>
-                        <li>Accounting</li>
-                        <li>Commerce</li>
-                        <li>Marketing</li>
-                        <li>Office Practice</li>
-                        <li>Insurance</li>
-                        <li>Business Studies</li>
-                        <li>Financial Accounting</li>
-                      </ul>
-                    </div>
-
-                    <div>
-                      <h4 className="font-bold mb-2">Arts and Humanities Subjects:</h4>
-                      <ul className="space-y-1 text-muted-foreground">
-                        <li>Government</li>
-                        <li>Literature in English</li>
-                        <li>Christian Religious Studies / Islamic Religious Studies</li>
-                        <li>History</li>
-                        <li>Civic Education</li>
-                        <li>Visual Arts</li>
-                        <li>Music</li>
-                        <li>French</li>
-                        <li>Nigerian Languages</li>
-                        <li>Arabic</li>
-                        <li>Social Studies</li>
-                      </ul>
-
-                      <h4 className="font-bold mt-6 mb-2">Vocational / Technical Subjects:</h4>
-                      <ul className="space-y-1 text-muted-foreground">
-                        <li>Home Management</li>
-                        <li>Clothing and Textiles</li>
-                        <li>Food and Nutrition</li>
-                        <li>Animal Husbandry</li>
-                        <li>Fisheries</li>
-                        <li>Carpentry and Joinery</li>
-                        <li>Electrical Installation</li>
-                        <li>Welding and Fabrication</li>
-                        <li>Data Processing</li>
-                        <li>Building Construction</li>
-                        <li>Auto Mechanics</li>
-                      </ul>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </TabsContent>
-          </Tabs>
+                          <div className="ml-14">
+                            <h3 className="text-xl font-bold mb-4">{category.name}</h3>
+                            <div className="grid grid-cols-1 gap-2">
+                              {category.subjects.map((subject, idx) => (
+                                <div
+                                  key={idx}
+                                  className="flex items-center p-2 rounded-md hover:bg-muted/50 transition-colors"
+                                >
+                                  <div className="h-2 w-2 rounded-full bg-primary mr-3"></div>
+                                  <span className="text-muted-foreground">{subject}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    )
+                  })}
+                </div>
+              </TabsContent>
+            </Tabs>
+          </div>
         </div>
       </section>
 
