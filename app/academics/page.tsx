@@ -5,16 +5,98 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 export default function AcademicsPage() {
+  const specialPrograms = [
+    {
+      title: "Music Program",
+      tagline: "Discover. Create. Perform.",
+      description:
+        "Our music program fosters artistic expression through vocal training, musical instruments, and theory. Students gain confidence, discipline, and stage experience through performances, school events, and competitions.",
+      backgroundImage: "/music.webp",
+    },
+    {
+      title: "Catering & Culinary Arts",
+      tagline: "From Kitchen to Career.",
+      description:
+        "Students learn the essentials of cooking, food presentation, nutrition, and hospitality. This program opens doors to careers in catering and equips students with valuable life skills in food preparation and hygiene.",
+      backgroundImage: "/meat.jpg",
+    },
+    {
+      title: "Fashion Design",
+      tagline: "Design Your Future.",
+      description:
+        "Our fashion program trains students in sewing, sketching, fabric selection, and modern trends. It encourages entrepreneurship and innovation while developing practical skills in clothing design and personal style.",
+      backgroundImage: "/fashion.jpg",
+    },
+    {
+      title: "Financial Literacy & Entrepreneurship",
+      tagline: "Think Smart. Build Wealth.",
+      description:
+        "This program introduces students to saving, budgeting, investing, and business planning. It instills financial responsibility and inspires young entrepreneurs to create, lead, and thrive in today's economy.",
+      backgroundImage: "/finance.jpg",
+    },
+    {
+      title: "Shoe Making",
+      tagline: "Step Into Craftsmanship.",
+      description:
+        "Our shoe making program teaches students the art of footwear design and production. Students learn material selection, pattern cutting, stitching, and finishing techniques to create quality, handcrafted shoes.",
+      backgroundImage: "/shoe.jpg",
+    },
+    {
+      title: "Phone Repair & Technology",
+      tagline: "Fix. Innovate. Connect.",
+      description:
+        "Students learn to diagnose and repair smartphones, tablets, and other electronic devices. This program provides practical skills in troubleshooting, component replacement, and customer service for the growing tech repair industry.",
+      backgroundImage: "/phone.jpg",
+    },
+    {
+      title: "Mechanical Engineering",
+      tagline: "Design. Build. Improve.",
+      description:
+        "Our mechanical engineering program introduces students to the principles of mechanics, thermodynamics, and material science. Students engage in hands-on projects designing and building mechanical systems and devices.",
+      backgroundImage: "/mechanical.jpg",
+    },
+    {
+      title: "Electrical Engineering",
+      tagline: "Power the Future.",
+      description:
+        "Students learn the fundamentals of electrical circuits, power systems, and electronics. This program combines theory with practical applications, preparing students for careers in electrical installation, maintenance, and design.",
+      backgroundImage: "/electrical.jpg",
+    },
+    {
+      title: "Media Arts",
+      tagline: "Create. Share. Influence.",
+      description:
+        "Our media arts program covers content creation, digital design, and social media management. Students develop skills in photography, video production, graphic design, and online content strategy for the digital age.",
+      backgroundImage: "/media.jpg",
+    },
+    {
+      title: "Carpentry",
+      tagline: "Craft with Precision.",
+      description:
+        "Students learn woodworking techniques, furniture design, and construction principles. This program develops skills in measurement, cutting, joining, and finishing to create functional and beautiful wooden structures and items.",
+      backgroundImage: "/carpentry.jpg",
+    },
+    {
+      title: "Hair Styling & Barbing",
+      tagline: "Style with Confidence.",
+      description:
+        "Our hair program teaches cutting, styling, coloring, and treatment techniques for all hair types. Students learn salon operations, customer service, and the latest trends in hair fashion and care.",
+      backgroundImage: "/styling.jpg",
+    },
+    {
+      title: "Animal Husbandry",
+      tagline: "Nurture. Grow. Sustain.",
+      description:
+        "Students learn livestock management, breeding, nutrition, and health care. This program provides practical experience in raising animals sustainably while developing business skills for agricultural entrepreneurship.",
+      backgroundImage: "/animal.jpg",
+    },
+  ]
+
   return (
     <main className="flex-1">
       {/* Hero Section */}
       <section className="relative h-[300px] md:h-[400px]">
-        <Image
-          src="/acad.jpg"
-          alt="Academics at Greatandy International Academy"
-          fill
-          className="object-cover"
-        />
+        <Image src="/acad.jpg" alt="Academics at Greatandy International Academy" fill className="object-cover" />
         <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
           <div className="container text-center text-white px-4 md:px-6">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Academics</h1>
@@ -26,7 +108,7 @@ export default function AcademicsPage() {
       </section>
 
       {/* Curriculum Overview */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white md:px-[45px]">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
             <div className="space-y-2">
@@ -52,21 +134,6 @@ export default function AcademicsPage() {
                 </p>
                 <p className="text-sm text-muted-foreground">
                   <strong>Grades:</strong> Basic 1-6
-                </p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="p-6">
-                <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                  <span className="text-xl font-bold text-primary">J</span>
-                </div>
-                <h3 className="text-xl font-bold mb-2">Junior Secondary School</h3>
-                <p className="text-muted-foreground mb-4">
-                  Our junior secondary curriculum builds on primary foundations while introducing more specialized
-                  subjects. Students develop research skills and deeper subject knowledge.
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  <strong>Grades:</strong> JSS 1-3
                 </p>
               </CardContent>
             </Card>
@@ -283,8 +350,8 @@ export default function AcademicsPage() {
       </section>
 
       {/* Special Programs */}
-      <section className="py-16 bg-white">
-        <div className="container px-4 md:px-6">
+      <section className="py-16 bg-white md:px-[45px]">
+        <div className="container px-4 md:px-[45px]">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
             <div className="space-y-2">
               <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">
@@ -297,85 +364,46 @@ export default function AcademicsPage() {
             </div>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2">
-            <Card>
-              <CardContent className="p-0">
-                <div className="h-40 bg-primary/10 flex items-center justify-center">
-                  <div className="text-center p-4">
-                    <h3 className="text-xl font-bold text-primary">Music Program</h3>
-                    <p className="text-sm italic">Discover. Create. Perform.</p>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <p className="text-muted-foreground">
-                    Our music program fosters artistic expression through vocal training, musical instruments, and
-                    theory. Students gain confidence, discipline, and stage experience through performances, school
-                    events, and competitions.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent className="p-0">
-                <div className="h-40 bg-primary/10 flex items-center justify-center">
-                  <div className="text-center p-4">
-                    <h3 className="text-xl font-bold text-primary">Catering & Culinary Arts</h3>
-                    <p className="text-sm italic">From Kitchen to Career.</p>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <p className="text-muted-foreground">
-                    Students learn the essentials of cooking, food presentation, nutrition, and hospitality. This
-                    program opens doors to careers in catering and equips students with valuable life skills in food
-                    preparation and hygiene.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent className="p-0">
-                <div className="h-40 bg-primary/10 flex items-center justify-center">
-                  <div className="text-center p-4">
-                    <h3 className="text-xl font-bold text-primary">Fashion Design</h3>
-                    <p className="text-sm italic">Design Your Future.</p>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <p className="text-muted-foreground">
-                    Our fashion program trains students in sewing, sketching, fabric selection, and modern trends. It
-                    encourages entrepreneurship and innovation while developing practical skills in clothing design and
-                    personal style.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent className="p-0">
-                <div className="h-40 bg-primary/10 flex items-center justify-center">
-                  <div className="text-center p-4">
-                    <h3 className="text-xl font-bold text-primary">Financial Literacy & Entrepreneurship</h3>
-                    <p className="text-sm italic">Think Smart. Build Wealth.</p>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <p className="text-muted-foreground">
-                    This program introduces students to saving, budgeting, investing, and business planning. It instills
-                    financial responsibility and inspires young entrepreneurs to create, lead, and thrive in today's
-                    economy.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+          <div className="text-center mb-8 bg-primary/5 p-6 rounded-lg">
+            <h3 className="text-xl font-bold text-primary mb-2">COMPUTER/ICT SKILLS INTEGRATION</h3>
+            <p className="text-muted-foreground max-w-3xl mx-auto">
+              To ensure our students are well-equipped for the digital age, COMPUTER/ICT skills are compulsory and will
+              be integrated with all vocational and technical programs. This integration prepares students for the
+              technology-driven workplace of today and tomorrow.
+            </p>
           </div>
 
-          <div className="mt-12 text-center">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {specialPrograms.map((program, index) => (
+              <Card key={index} className="overflow-hidden group hover:shadow-lg transition-all duration-300">
+                <CardContent className="p-0">
+                  <div className="h-48 relative">
+                    <Image
+                      src={program.backgroundImage || "/placeholder.svg"}
+                      alt={program.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20 flex items-end">
+                      <div className="p-6 text-white">
+                        <h3 className="text-xl font-bold">{program.title}</h3>
+                        <p className="text-sm italic text-white/80">{program.tagline}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="p-6 bg-white">
+                    <p className="text-muted-foreground">{program.description}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* <div className="mt-12 text-center">
             <Button asChild>
               <Link href="/programs">Explore All Programs</Link>
             </Button>
-          </div>
+          </div> */}
         </div>
       </section>
 
