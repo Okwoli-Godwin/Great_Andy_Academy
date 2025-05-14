@@ -83,9 +83,9 @@ export default function StudentLifePage() {
                 </p>
               </div>
             </div>
-            <div className="relative h-[300px] rounded-lg overflow-hidden">
+            <div className="relative h-[600px] rounded-lg overflow-hidden">
               <Image
-                src="/placeholder.svg?height=300&width=500"
+                src="/student_life.jpeg"
                 alt="Students at Greatandy"
                 fill
                 className="object-cover"
@@ -96,7 +96,7 @@ export default function StudentLifePage() {
       </section>
 
       {/* Core Values */}
-      <section className="py-16 bg-muted/50">
+      <section className="py-16 bg-muted/50 md:px-[45px]">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
             <div className="space-y-2">
