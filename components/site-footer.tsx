@@ -26,7 +26,7 @@ export function SiteFooter() {
             </Link>
             <p className="text-sm">Bringing Up Greater Academicians and Disciplined Personnel.</p>
             <div className="flex space-x-4">
-              <Link href="https://www.facebook.com/okpellatv/videos/2040379193131613/?app=fbl" className="hover:text-gold-yellow transition-colors">
+              <Link href="https://www.facebook.com/GreatandyInternationalAcademyGIA/" className="hover:text-gold-yellow transition-colors">
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </Link>
