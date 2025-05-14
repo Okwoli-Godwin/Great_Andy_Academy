@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { BookOpen, Music, Code, FlaskRoundIcon as Flask, Coins, Shirt, ChevronRight } from "lucide-react"
+import { BookOpen, Music, Code, FlaskRoundIcon as Flask, Coins, Shirt, ChevronRight, Expand } from "lucide-react"
 
 export default function StudentLifePage() {
   const clubs = [
@@ -65,6 +65,49 @@ export default function StudentLifePage() {
       lightColor: "bg-rose-50",
       borderColor: "border-rose-200",
       image: "/placeholder.svg?height=200&width=300&text=Fashion+Club",
+    },
+  ]
+
+  const galleryImages = [
+    {
+      src: "/student_doctors.jpeg",
+      alt: "",
+      caption: "",
+    },
+    {
+      src: "/student_engineers.jpeg",
+      alt: "",
+      caption: "",
+    },
+    {
+      src: "/sport.jpeg",
+      alt: "",
+      caption: "",
+    },
+    {
+      src: "/playground.jpeg",
+      alt: "",
+      caption: "",
+    },
+    {
+      src: "/student_nurse.jpeg",
+      alt: "",
+      caption: "",
+    },
+    {
+      src: "/catering.jpeg",
+      alt: "",
+      caption: "",
+    },
+    {
+      src: "/cultural.jpeg",
+      alt: "",
+      caption: "",
+    },
+    {
+      src: "/exam.jpeg",
+      alt: "",
+      caption: "",
     },
   ]
 
@@ -256,50 +299,74 @@ export default function StudentLifePage() {
             ))}
           </div>
 
-          <div className="mt-16 text-center">
+          {/* <div className="mt-16 text-center">
             <Button asChild className="bg-primary hover:bg-primary/90 text-white px-8 py-6 rounded-lg text-lg">
               <Link href="/clubs" className="flex items-center">
                 Explore All Clubs
                 <ChevronRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-          </div>
+          </div> */}
         </div>
       </section>
 
       {/* Gallery */}
-      <section className="py-16 bg-muted/50">
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+      <section className="py-20 bg-gradient-to-b from-muted/50 to-muted/80 md:px-[45px] relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-30"></div>
+        <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+        <div className="absolute -top-24 -left-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+
+        <div className="container px-4 md:px-6 relative z-10">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
             <div className="space-y-2">
               <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">
                 Student Showcase
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Life at Greatandy</h2>
+              <div className="w-24 h-1 bg-primary mx-auto my-6"></div>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Glimpses of our vibrant school community in action.
               </p>
             </div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {[...Array(8)].map((_, index) => (
-              <div key={index} className="relative aspect-square overflow-hidden rounded-lg">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {galleryImages.map((image, index) => (
+              <div
+                key={index}
+                className="group relative aspect-square overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300"
+              >
                 <Image
-                  src={`/placeholder.svg?height=300&width=300&text=Gallery+${index + 1}`}
-                  alt={`Gallery image ${index + 1}`}
+                  src={image.src || "/placeholder.svg"}
+                  alt={image.alt}
                   fill
-                  className="object-cover transition-transform hover:scale-105"
+                  className="object-cover transition-all duration-500 group-hover:scale-110"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                  <h3 className="text-white font-bold text-lg">{image.caption}</h3>
+                  <div className="mt-2 flex justify-between items-center">
+                    <p className="text-white/80 text-sm">{image.alt}</p>
+                    <div className="h-8 w-8 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm">
+                      <Expand className="h-4 w-4 text-white" />
+                    </div>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
 
-          <div className="mt-12 text-center">
-            <Button asChild variant="outline">
-              <Link href="/gallery">View Full Gallery</Link>
+          {/* <div className="mt-16 text-center">
+            <Button
+              asChild
+              variant="outline"
+              className="border-primary text-primary hover:bg-primary/10 px-8 py-6 rounded-lg text-lg"
+            >
+              <Link href="/gallery" className="flex items-center">
+                View Full Gallery
+                <ChevronRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
-          </div>
+          </div> */}
         </div>
       </section>
 
