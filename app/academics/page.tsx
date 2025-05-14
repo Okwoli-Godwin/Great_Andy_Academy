@@ -12,7 +12,7 @@ export default function AcademicsPage() {
       tagline: "Discover. Create. Perform.",
       description:
         "Our music program fosters artistic expression through vocal training, musical instruments, and theory. Students gain confidence, discipline, and stage experience through performances, school events, and competitions.",
-      backgroundImage: "/music.webp",
+      backgroundImage: "/music.jpg",
     },
     {
       title: "Catering & Culinary Arts",
@@ -26,70 +26,70 @@ export default function AcademicsPage() {
       tagline: "Design Your Future.",
       description:
         "Our fashion program trains students in sewing, sketching, fabric selection, and modern trends. It encourages entrepreneurship and innovation while developing practical skills in clothing design and personal style.",
-      backgroundImage: "/fashion.jpg",
+      backgroundImage: "/fashion_student.jpg",
     },
     {
       title: "Financial Literacy & Entrepreneurship",
       tagline: "Think Smart. Build Wealth.",
       description:
         "This program introduces students to saving, budgeting, investing, and business planning. It instills financial responsibility and inspires young entrepreneurs to create, lead, and thrive in today's economy.",
-      backgroundImage: "/finance.jpg",
+      backgroundImage: "/financial.jpg",
     },
     {
       title: "Shoe Making",
       tagline: "Step Into Craftsmanship.",
       description:
         "Our shoe making program teaches students the art of footwear design and production. Students learn material selection, pattern cutting, stitching, and finishing techniques to create quality, handcrafted shoes.",
-      backgroundImage: "/shoe.jpg",
+      backgroundImage: "/shoe_making.jpg",
     },
     {
       title: "Phone Repair & Technology",
       tagline: "Fix. Innovate. Connect.",
       description:
         "Students learn to diagnose and repair smartphones, tablets, and other electronic devices. This program provides practical skills in troubleshooting, component replacement, and customer service for the growing tech repair industry.",
-      backgroundImage: "/phone.jpg",
+      backgroundImage: "/phone_repair.jpg",
     },
     {
       title: "Mechanical Engineering",
       tagline: "Design. Build. Improve.",
       description:
         "Our mechanical engineering program introduces students to the principles of mechanics, thermodynamics, and material science. Students engage in hands-on projects designing and building mechanical systems and devices.",
-      backgroundImage: "/mechanical.jpg",
+      backgroundImage: "/mechanical_engineering.jpg",
     },
     {
       title: "Electrical Engineering",
       tagline: "Power the Future.",
       description:
         "Students learn the fundamentals of electrical circuits, power systems, and electronics. This program combines theory with practical applications, preparing students for careers in electrical installation, maintenance, and design.",
-      backgroundImage: "/electrical.jpg",
+      backgroundImage: "/electrical_engineering.jpg",
     },
     {
       title: "Media Arts",
       tagline: "Create. Share. Influence.",
       description:
         "Our media arts program covers content creation, digital design, and social media management. Students develop skills in photography, video production, graphic design, and online content strategy for the digital age.",
-      backgroundImage: "/media.jpg",
+      backgroundImage: "/media_art.jpg",
     },
     {
       title: "Carpentry",
       tagline: "Craft with Precision.",
       description:
         "Students learn woodworking techniques, furniture design, and construction principles. This program develops skills in measurement, cutting, joining, and finishing to create functional and beautiful wooden structures and items.",
-      backgroundImage: "/carpentry.jpg",
+      backgroundImage: "/carpenter.jpg",
     },
     {
       title: "Hair Styling & Barbing",
       tagline: "Style with Confidence.",
       description:
         "Our hair program teaches cutting, styling, coloring, and treatment techniques for all hair types. Students learn salon operations, customer service, and the latest trends in hair fashion and care.",
-      backgroundImage: "/styling.jpg",
+      backgroundImage: "/barbing.jpg",
     },
     {
       title: "Animal Husbandry",
       tagline: "Nurture. Grow. Sustain.",
       description:
         "Students learn livestock management, breeding, nutrition, and health care. This program provides practical experience in raising animals sustainably while developing business skills for agricultural entrepreneurship.",
-      backgroundImage: "/animal.jpg",
+      backgroundImage: "/animal_husbandary.jpg",
     },
   ]
 

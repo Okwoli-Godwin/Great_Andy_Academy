@@ -63,7 +63,7 @@ export default function StudentLifePage() {
       </section>
 
       {/* Overview */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white md:px-[45px]">
         <div className="container px-4 md:px-6">
           <div className="grid gap-12 md:grid-cols-2 items-center">
             <div className="space-y-4">
