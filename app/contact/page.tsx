@@ -1,6 +1,4 @@
 "use client"
-
-import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -316,7 +314,7 @@ export default function ContactPage() {
                       <ChevronDown className="h-5 w-5 text-primary accordion-icon" />
                     </div>
                     <h3 className="text-lg font-bold text-gray-900 text-left">
-                      What levels of education does Greatandy International Academy offer?
+                      1. What levels of education does Greatandy International Academy offer?
                     </h3>
                   </div>
                 </AccordionTrigger>
@@ -338,7 +336,7 @@ export default function ContactPage() {
                       <ChevronDown className="h-5 w-5 text-primary accordion-icon" />
                     </div>
                     <h3 className="text-lg font-bold text-gray-900 text-left">
-                      Is the school government-approved and accredited?
+                      2. Is the school government-approved and accredited?
                     </h3>
                   </div>
                 </AccordionTrigger>
@@ -359,7 +357,7 @@ export default function ContactPage() {
                     <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center mr-4 group-hover:bg-primary/20 transition-colors duration-200">
                       <ChevronDown className="h-5 w-5 text-primary accordion-icon" />
                     </div>
-                    <h3 className="text-lg font-bold text-gray-900 text-left">When was the school established?</h3>
+                    <h3 className="text-lg font-bold text-gray-900 text-left">3. When was the school established?</h3>
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="px-6 py-4 pt-0 text-muted-foreground border-t border-gray-100">
@@ -380,7 +378,7 @@ export default function ContactPage() {
                       <ChevronDown className="h-5 w-5 text-primary accordion-icon" />
                     </div>
                     <h3 className="text-lg font-bold text-gray-900 text-left">
-                      What examinations do your students sit for?
+                      4. What examinations do your students sit for?
                     </h3>
                   </div>
                 </AccordionTrigger>
@@ -401,7 +399,7 @@ export default function ContactPage() {
                     <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center mr-4 group-hover:bg-primary/20 transition-colors duration-200">
                       <ChevronDown className="h-5 w-5 text-primary accordion-icon" />
                     </div>
-                    <h3 className="text-lg font-bold text-gray-900 text-left">Do you offer boarding facilities?</h3>
+                    <h3 className="text-lg font-bold text-gray-900 text-left">5. Do you offer boarding facilities?</h3>
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="px-6 py-4 pt-0 text-muted-foreground border-t border-gray-100">
@@ -411,17 +409,124 @@ export default function ContactPage() {
                   </div>
                 </AccordionContent>
               </AccordionItem>
-            </Accordion>
-          </div>
 
-          <div className="mt-12 text-center">
-            <Button
-              asChild
-              variant="outline"
-              className="border-primary text-primary hover:bg-primary/10 px-8 py-6 rounded-lg text-lg font-medium transition-all duration-300"
-            >
-              <Link href="/faq">View All FAQs</Link>
-            </Button>
+              <AccordionItem
+                value="item-6"
+                className="border border-gray-200 rounded-xl overflow-hidden shadow-md bg-white"
+              >
+                <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-gray-50 group">
+                  <div className="flex items-center">
+                    <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center mr-4 group-hover:bg-primary/20 transition-colors duration-200">
+                      <ChevronDown className="h-5 w-5 text-primary accordion-icon" />
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900 text-left">
+                      6. What makes Greatandy different from other schools?
+                    </h3>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 py-4 pt-0 text-muted-foreground border-t border-gray-100">
+                  <div className="pl-14">
+                    We focus on academic excellence, moral discipline, leadership training, digital literacy, and skill
+                    acquisition—preparing our students for both local and global challenges.
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem
+                value="item-7"
+                className="border border-gray-200 rounded-xl overflow-hidden shadow-md bg-white"
+              >
+                <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-gray-50 group">
+                  <div className="flex items-center">
+                    <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center mr-4 group-hover:bg-primary/20 transition-colors duration-200">
+                      <ChevronDown className="h-5 w-5 text-primary accordion-icon" />
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900 text-left">
+                      7. What extracurricular or skill-based programs do you offer?
+                    </h3>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 py-4 pt-0 text-muted-foreground border-t border-gray-100">
+                  <div className="pl-14">
+                    We offer ICT training, leadership development programs, entrepreneurship training, vocational
+                    skills, and sports.
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem
+                value="item-8"
+                className="border border-gray-200 rounded-xl overflow-hidden shadow-md bg-white"
+              >
+                <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-gray-50 group">
+                  <div className="flex items-center">
+                    <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center mr-4 group-hover:bg-primary/20 transition-colors duration-200">
+                      <ChevronDown className="h-5 w-5 text-primary accordion-icon" />
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900 text-left">8. How do I enroll my child?</h3>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 py-4 pt-0 text-muted-foreground border-t border-gray-100">
+                  <div className="pl-14">
+                    Visit the school or contact our admissions office. You can also begin the registration process
+                    online through our website or WhatsApp platform.
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem
+                value="item-9"
+                className="border border-gray-200 rounded-xl overflow-hidden shadow-md bg-white"
+              >
+                <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-gray-50 group">
+                  <div className="flex items-center">
+                    <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center mr-4 group-hover:bg-primary/20 transition-colors duration-200">
+                      <ChevronDown className="h-5 w-5 text-primary accordion-icon" />
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900 text-left">
+                      9. What is the school's policy on discipline?
+                    </h3>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 py-4 pt-0 text-muted-foreground border-t border-gray-100">
+                  <div className="pl-14">
+                    We uphold strong values of discipline and respect. Our students are guided by moral principles and
+                    are trained to be responsible, ethical individuals.
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem
+                value="item-10"
+                className="border border-gray-200 rounded-xl overflow-hidden shadow-md bg-white"
+              >
+                <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-gray-50 group">
+                  <div className="flex items-center">
+                    <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center mr-4 group-hover:bg-primary/20 transition-colors duration-200">
+                      <ChevronDown className="h-5 w-5 text-primary accordion-icon" />
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900 text-left">
+                      10. How can I contact the school for more information?
+                    </h3>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 py-4 pt-0 text-muted-foreground border-t border-gray-100">
+                  <div className="pl-14">
+                    <p className="mb-2">You can reach us via phone, email, or by visiting our campus at:</p>
+                    <p className="mb-1">
+                      <span className="font-medium">Address:</span> 65km Along Okene-Benin road, Greatandy Avenue,
+                      Okpella, Edo State
+                    </p>
+                    <p className="mb-1">
+                      <span className="font-medium">Phone:</span> +2347068004110
+                    </p>
+                    <p>
+                      <span className="font-medium">Email:</span> greatandyinternationalacademy@gmail.com
+                    </p>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
       </section>
