@@ -43,7 +43,7 @@ export default function Home() {
       description: "Discover. Create. Perform.",
       details:
         "Our music program fosters artistic expression through vocal training, musical instruments, and theory. Students gain confidence, discipline, and stage experience through performances, school events, and competitions.",
-      backgroundImage: "/music.webp",
+      backgroundImage: "/music.jpg",
     },
     {
       title: "Catering & Culinary Arts",
@@ -57,14 +57,14 @@ export default function Home() {
       description: "Design Your Future.",
       details:
         "Our fashion program trains students in sewing, sketching, fabric selection, and modern trends. It encourages entrepreneurship and innovation while developing practical skills in clothing design and personal style.",
-      backgroundImage: "/fashion.jpg",
+      backgroundImage: "/fashion_student.jpg",
     },
     {
       title: "Financial Literacy & Entrepreneurship",
       description: "Think Smart. Build Wealth.",
       details:
         "This program introduces students to saving, budgeting, investing, and business planning. It instills financial responsibility and inspires young entrepreneurs to create, lead, and thrive in today's economy.",
-      backgroundImage: "/finance.jpg",
+      backgroundImage: "/financial.jpg",
     },
   ]
   return (
