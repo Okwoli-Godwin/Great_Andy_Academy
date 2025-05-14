@@ -152,7 +152,7 @@ export default function AdmissionsPage() {
           </div>
         </section>
 
-        <section className="py-16 bg-white">
+        {/* <section className="py-16 bg-white">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -197,7 +197,7 @@ export default function AdmissionsPage() {
               </Card>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* <div className="flex flex-col sm:flex-row justify-center gap-4 mt-12">
           <Button className="bg-bridges-red hover:bg-red-800 text-white px-8 py-6 text-lg rounded-lg">Apply Now</Button>
