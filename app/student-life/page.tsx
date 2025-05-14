@@ -383,7 +383,7 @@ export default function StudentLifePage() {
             <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90">
               <Link href="/admissions">Apply Now</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-white hover:bg-white/10">
+            <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90">
               <Link href="/contact">Schedule a Visit</Link>
             </Button>
           </div>
