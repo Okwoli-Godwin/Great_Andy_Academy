@@ -5,7 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu, Phone, Mail, ChevronDown } from "lucide-react"
+import { Menu, ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 export function SiteHeader() {
@@ -112,7 +112,7 @@ export function SiteHeader() {
       <div
         className={cn("bg-navy-blue border-t border-navy-blue/30 transition-all duration-300", scrolled && "shadow-md")}
       >
-        <div className=" px-[55px] flex h-16 items-center justify-between">
+        <div className=" px-[25px] md:px-[55px] flex h-16 items-center justify-between">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
               {/* <div
@@ -121,12 +121,7 @@ export function SiteHeader() {
                   scrolled ? "h-14 w-14" : "h-16 w-16",
                 )}
               > */}
-                <Image
-                  src="/great.jpg"
-                  alt="Greatandy International Academy"
-                  width={80}
-                  height={80}
-                />
+              <Image src="/great.jpg" alt="Greatandy International Academy" width={80} height={80} />
               {/* </div> */}
               <div className="hidden md:block text-white">
                 <div className="text-lg font-bold">GREATANDY</div>
@@ -185,22 +180,20 @@ export function SiteHeader() {
 
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="lg:hidden text-white">
-                  <Menu className="h-6 w-6" />
+                <Button variant="ghost" size="icon" className="lg:hidden text-white p-4">
+                  <Menu className="h-10 w-10" size={40}/>
                   <span className="sr-only">Toggle menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="bg-navy-blue text-white border-maroon-red">
-                <div className="grid gap-6 py-6">
+              <SheetContent
+                side="right"
+                className="bg-navy-blue text-white border-maroon-red max-h-screen overflow-y-auto"
+              >
+                <div className="grid gap-6 py-6 h-full">
                   <Link href="/" className="flex items-center space-x-2" onClick={() => setIsOpen(false)}>
-                    <div className="relative h-10 w-10 bg-school-blue rounded-full flex items-center justify-center">
-                      <Image
-                        src="/placeholder.svg?height=32&width=32"
-                        alt="Greatandy International Academy"
-                        width={32}
-                        height={32}
-                      />
-                    </div>
+                    {/* <div className="relative h-10 w-10 bg-school-blue rounded-full flex items-center justify-center"> */}
+                    <Image src="/great.jpg" alt="Greatandy International Academy" width={52} height={52} />
+                    {/* </div> */}
                     <div>
                       <div className="text-sm font-bold">GREATANDY</div>
                       <div className="text-xs">INTERNATIONAL ACADEMY</div>
