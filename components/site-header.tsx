@@ -5,13 +5,12 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu, ChevronDown } from "lucide-react"
+import { Menu } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 export function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -121,7 +120,7 @@ export function SiteHeader() {
                   scrolled ? "h-14 w-14" : "h-16 w-16",
                 )}
               > */}
-              <Image src="/great.jpg" alt="Greatandy International Academy" width={80} height={80} />
+              <Image src="/great.jpg" alt="Greatandy International Academy" width={70} height={70} />
               {/* </div> */}
               <div className="hidden md:block text-white">
                 <div className="text-lg font-bold">GREATANDY</div>
@@ -132,39 +131,10 @@ export function SiteHeader() {
 
           <nav className="hidden lg:flex items-center">
             {navItems.map((item) => (
-              <div
-                key={item.name}
-                className="relative group"
-                onMouseEnter={() => setActiveDropdown(item.name)}
-                onMouseLeave={() => setActiveDropdown(null)}
-              >
+              <div key={item.name} className="relative">
                 <Link href={item.href} className="nav-item uppercase font-medium text-sm tracking-wider">
                   {item.name}
-                  {item.dropdown.length > 0 && <ChevronDown className="h-4 w-4 inline-block ml-1" />}
                 </Link>
-
-                {item.dropdown.length > 0 && (
-                  <div
-                    className={cn(
-                      "absolute top-full left-0 bg-white shadow-lg rounded-b-lg min-w-[200px] transition-all duration-300 transform origin-top",
-                      activeDropdown === item.name
-                        ? "scale-y-100 opacity-100"
-                        : "scale-y-0 opacity-0 pointer-events-none",
-                    )}
-                  >
-                    <div className="py-2">
-                      {item.dropdown.map((dropItem) => (
-                        <Link
-                          key={dropItem.name}
-                          href={dropItem.href}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-maroon-red/10 hover:text-maroon-red"
-                        >
-                          {dropItem.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
               </div>
             ))}
           </nav>
@@ -181,7 +151,7 @@ export function SiteHeader() {
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" className="lg:hidden text-white p-4">
-                  <Menu className="h-10 w-10" size={40}/>
+                  <Menu className="h-10 w-10" size={40} />
                   <span className="sr-only">Toggle menu</span>
                 </Button>
               </SheetTrigger>
