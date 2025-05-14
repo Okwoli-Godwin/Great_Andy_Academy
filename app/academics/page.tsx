@@ -337,24 +337,24 @@ export default function AcademicsPage() {
 
             <Tabs defaultValue="primary" className="max-w-5xl mx-auto">
               <div className="bg-white p-4 rounded-lg shadow-md mb-6">
-                <TabsList className="grid w-full grid-cols-3 p-1 bg-muted/30">
+                <TabsList className="w-full flex overflow-x-auto space-x-2 pl-4 p-2 bg-muted/30 snap-x">
                   <TabsTrigger
                     value="primary"
-                    className="data-[state=active]:bg-primary data-[state=active]:text-white rounded-md transition-all"
+                    className="data-[state=active]:bg-primary data-[state=active]:text-white rounded-md transition-all flex-shrink-0 snap-start"
                   >
-                    Primary School
+                    Primary
                   </TabsTrigger>
                   <TabsTrigger
                     value="junior"
-                    className="data-[state=active]:bg-primary data-[state=active]:text-white rounded-md transition-all"
+                    className="data-[state=active]:bg-primary data-[state=active]:text-white rounded-md transition-all flex-shrink-0 snap-start"
                   >
-                    Junior Secondary
+                    Junior
                   </TabsTrigger>
                   <TabsTrigger
                     value="senior"
-                    className="data-[state=active]:bg-primary data-[state=active]:text-white rounded-md transition-all"
+                    className="data-[state=active]:bg-primary data-[state=active]:text-white rounded-md transition-all flex-shrink-0 snap-start"
                   >
-                    Senior Secondary
+                    Senior
                   </TabsTrigger>
                 </TabsList>
               </div>
