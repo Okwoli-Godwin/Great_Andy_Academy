@@ -18,7 +18,12 @@ const openSans = Open_Sans({
 export const metadata = {
   title: "Greatandy International Academy",
   description: "Bringing Up Greater Academicians and Disciplined Personnel",
-    generator: 'v0.dev'
+    generator: 'v0.dev',
+    icons: {
+      icon: '/great.jpg',
+      shortcut: '/great.jpg',
+      apple: '/great.jpg',
+    },
 }
 
 export default function RootLayout({
