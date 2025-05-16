@@ -9,7 +9,7 @@ export function HeroSlider() {
 
   const slides = [
     {
-      video: "/videos/school1.mp4", // Update with your actual video path
+      video: "/videos/sch.mp4", // Update with your actual video path
       alt: "School building",
       title: "The Greatandy Difference...",
       subtitle: "CHARACTER · CONFIDENCE · KNOWLEDGE",

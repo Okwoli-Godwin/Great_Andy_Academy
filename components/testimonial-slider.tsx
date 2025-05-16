@@ -27,18 +27,18 @@ export function TestimonialSlider() {
 
   const testimonials: Testimonial[] = [
     {
-      name: "Mrs. Johnson",
-      role: "Parent of JSS2 Student",
+      name: "Mrs. Iguoba Beckybryte",
+      role: "Parent Testimonial",
       content:
-        "The transformation in my child since joining Greatandy has been remarkable. The teachers are dedicated and the values instilled are evident in my child's behavior and academic performance.",
-      imageSrc: "/placeholder.svg?height=80&width=80",
+        "I'm proud to be a parent at Greatandy International Academy. The school excels in academics, discipline, and guiding students toward their dreams. With dedicated leadership and outstanding results, enrolling my children here is one of my best decisions. Thank you to the Director and team for your commitment to excellence in Okpella.",
+      imageSrc: "/iguoba.jpg",
     },
     {
-      name: "Mr. Okonkwo",
-      role: "Parent of Primary 5 Student",
+      name: "Mrs. Temitope Hope ",
+      role: "Parent Testimonial",
       content:
-        "The holistic approach to education at Greatandy is impressive. My child is not only excelling academically but also developing practical skills and strong moral values.",
-      imageSrc: "/placeholder.svg?height=80&width=80",
+        "Greatandy International Academy leads in academics and discipline—it's the best school I've seen in Okpella. Their commitment to raising well-rounded children is impressive. My advice to parents: stay involved, check assignments, and partner with the school to raise future leaders.",
+      imageSrc: "/temi.jpg",
     },
     {
       name: "Dr. Adeyemi",
