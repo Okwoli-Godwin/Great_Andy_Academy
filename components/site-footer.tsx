@@ -13,7 +13,7 @@ export function SiteFooter() {
             <Link href="/" className="flex items-center space-x-2">
               {/* <div className="relative h-12 w-12 bg-school-blue rounded-lg overflow-hidden flex items-center justify-center"> */}
                 <Image
-                  src="/great.jpg"
+                  src="/gia2.png"
                   alt="Greatandy International Academy"
                   width={80}
                   height={80}
@@ -30,14 +30,14 @@ export function SiteFooter() {
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </Link>
-              <Link href="#" className="hover:text-gold-yellow transition-colors">
+              <Link href="https://www.instagram.com/greatandy_international_academ?igsh=MWxxMTN4NG5idXlpdA==" className="hover:text-gold-yellow transition-colors">
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
-              <Link href="#" className="hover:text-gold-yellow transition-colors">
+              {/* <Link href="#" className="hover:text-gold-yellow transition-colors">
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
-              </Link>
+              </Link> */}
             </div>
           </div>
           <div className="space-y-4">
@@ -61,11 +61,6 @@ export function SiteFooter() {
               <li>
                 <Link href="/student-life" className="hover:text-gold-yellow transition-colors">
                   Student Life
-                </Link>
-              </li>
-              <li>
-                <Link href="/programs" className="hover:text-gold-yellow transition-colors">
-                  Programs
                 </Link>
               </li>
               <li>

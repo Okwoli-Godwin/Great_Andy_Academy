@@ -45,21 +45,7 @@ export function TestimonialSlider() {
       role: "Parent of SSS3 Student",
       content:
         "The quality of education and personal attention given to students at Greatandy is exceptional. The school has prepared my child well for university and beyond.",
-      imageSrc: "/placeholder.svg?height=80&width=80",
-    },
-    {
-      name: "Mrs. Nwachukwu",
-      role: "Parent of JSS1 Student",
-      content:
-        "Choosing Greatandy was the best decision for my child's education. The academic standards are high, and the environment nurtures confidence and creativity.",
-      imageSrc: "/placeholder.svg?height=80&width=80",
-    },
-    {
-      name: "Mr. Adekunle",
-      role: "Parent of Primary 3 Student",
-      content:
-        "I'm impressed by how the teachers at Greatandy make learning fun and engaging. My child is always excited to go to school and share what they've learned.",
-      imageSrc: "/placeholder.svg?height=80&width=80",
+      imageSrc: "/black_man.jpg",
     },
   ]
 
@@ -108,8 +94,10 @@ export function TestimonialSlider() {
                             className="object-cover"
                           />
                         </div>
+                        <div className="text-center">
                         <h4 className="font-bold text-xl">{testimonial.name}</h4>
                         <p className="text-sm text-blue-100">{testimonial.role}</p>
+                        </div>
                       </div>
                       <div className="p-8 flex flex-col justify-center relative">
                         <Quote className="absolute text-blue-100 w-12 h-12 top-4 left-4 opacity-20" />

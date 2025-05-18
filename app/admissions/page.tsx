@@ -84,18 +84,19 @@ export default function AdmissionsPage() {
                   Tuition and Financial Aid
                 </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  The Bridges Academy is committed to making our educational experience accessible to qualified students
-                  from diverse backgrounds. We offer financial aid to families who demonstrate need.
+                Greatandy International Academy is committed to delivering quality education in a disciplined and
+              value-driven environment. We appreciate your unwavering support and commitment to your child's academic
+              growth.
                 </p>
               </div>
             </div>
 
-            <h2 className="text-bridges-red text-2xl font-serif mt-8 mb-4">Tuition and Financial Aid</h2>
+            {/* <h2 className="text-bridges-red text-2xl font-serif mt-8 mb-4">Tuition and Financial Aid</h2>
             <p className="mb-6">
               Greatandy International Academy is committed to delivering quality education in a disciplined and
               value-driven environment. We appreciate your unwavering support and commitment to your child's academic
               growth.
-            </p>
+            </p> */}
 
             <div className="bg-white p-6 rounded-lg shadow-lg my-8 border border-gray-100">
               <h3 className="text-bridges-red text-xl font-serif mb-4">SCHOOL FEES SCHEDULE (2025)</h3>

@@ -9,30 +9,30 @@ export function HeroSlider() {
 
   const slides = [
     {
-      video: "/videos/sch.mp4", // Update with your actual video path
+      video: "/videos/vid2.mp4", // Update with your actual video path
       alt: "School building",
       title: "The Greatandy Difference...",
       subtitle: "CHARACTER · CONFIDENCE · KNOWLEDGE",
     },
     {
-      video: "/videos/school2.mp4", // Update with your actual video path
+      video: "/videos/vid.mp4", // Update with your actual video path
       alt: "Students in classroom",
       title: "Academic Excellence",
       subtitle: "Nurturing Minds, Building Futures",
     },
-    {
-      video: "/videos/school3.mp4", // Update with your actual video path
-      alt: "School activities",
-      title: "Holistic Education",
-      subtitle: "Developing Character and Skills for Life",
-    },
+    // {
+    //   video: "/videos/school3.mp4", // Update with your actual video path
+    //   alt: "School activities",
+    //   title: "Holistic Education",
+    //   subtitle: "Developing Character and Skills for Life",
+    // },
   ]
 
   // Handle slide transitions
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
-    }, 5000)
+    }, 15000)
     return () => clearInterval(interval)
   }, [slides.length])
 

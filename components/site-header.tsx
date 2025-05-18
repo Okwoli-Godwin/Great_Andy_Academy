@@ -120,7 +120,7 @@ export function SiteHeader() {
                   scrolled ? "h-14 w-14" : "h-16 w-16",
                 )}
               > */}
-              <Image src="/great.jpg" alt="Greatandy International Academy" width={70} height={70} />
+              <Image src="/gia2.png" alt="Greatandy International Academy" width={70} height={70} />
               {/* </div> */}
               <div className="hidden md:block text-white">
                 <div className="text-lg font-bold">GREATANDY</div>
@@ -162,7 +162,7 @@ export function SiteHeader() {
                 <div className="grid gap-6 py-6 h-full">
                   <Link href="/" className="flex items-center space-x-2" onClick={() => setIsOpen(false)}>
                     {/* <div className="relative h-10 w-10 bg-school-blue rounded-full flex items-center justify-center"> */}
-                    <Image src="/great.jpg" alt="Greatandy International Academy" width={52} height={52} />
+                    <Image src="/gia2.png" alt="Greatandy International Academy" width={52} height={52} />
                     {/* </div> */}
                     <div>
                       <div className="text-sm font-bold">GREATANDY</div>

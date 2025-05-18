@@ -109,6 +109,56 @@ export default function StudentLifePage() {
       alt: "",
       caption: "",
     },
+    {
+      src: "/gal1.jpg",
+      alt: "",
+      caption: "",
+    },
+    {
+      src: "/gal2.jpg",
+      alt: "",
+      caption: "",
+    },
+    {
+      src: "/gal3.jpg",
+      alt: "",
+      caption: "",
+    },
+    {
+      src: "/gal4.jpg",
+      alt: "",
+      caption: "",
+    },
+    {
+      src: "/gal5.jpg",
+      alt: "",
+      caption: "",
+    },
+    {
+      src: "/gal6.jpg",
+      alt: "",
+      caption: "",
+    },
+    {
+      src: "/gal7.jpg",
+      alt: "",
+      caption: "",
+    },
+    {
+      src: "/gal8.jpg",
+      alt: "",
+      caption: "",
+    },
+    {
+      src: "/gal9.jpg",
+      alt: "",
+      caption: "",
+    },
+    {
+      src: "/gal10.jpg",
+      alt: "",
+      caption: "",
+    },
   ]
 
   return (
